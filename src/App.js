@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "./root.css";
 import "./App.css";
 import Header from "./components/Header/Header";
-import SideManue from "./components/SideMenue/SideMenue";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import Products from "./pages/Products/Products";
@@ -19,6 +18,25 @@ import {
   Redirect,
   Link,
 } from "react-router-dom";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faCheckSquare,
+  faBars,
+  faPlusCircle,
+  faShoppingCart,
+  faHome,
+  faAddressCard,
+} from "@fortawesome/free-solid-svg-icons";
+import { fab, faCottonBureau } from "@fortawesome/free-brands-svg-icons";
+library.add(
+  fab,
+  faCheckSquare,
+  faBars,
+  faPlusCircle,
+  faShoppingCart,
+  faHome,
+  faAddressCard
+);
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const { token } = useSelector((state) => state.userAuth);
@@ -36,11 +54,6 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 const App = () => {
   return (
     <div className="App">
-<<<<<<< HEAD
-      <Header />
-      <SideManue />
-=======
->>>>>>> upstream/master
       <Router>
         <Header />
         <Switch>
