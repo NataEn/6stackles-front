@@ -8,15 +8,6 @@ import SideManue from "../SideMenue/SideMenue";
 const Header = () => {
   const [sideMenueOpen, setSideMenueOpen] = useState(false);
   return (
-<<<<<<< HEAD
-    <div className="header" data-testid="header">
-      <FontAwesomeIcon icon={faBars} className="header_ham" />
-      <img src={yad} alt="logo" className="header_logo" />
-      <Link className="product_info_link" to={`/profile`}>
-        <img src={userLogo} alt="userLogo" className="header_userLogo" />{" "}
-      </Link>
-    </div>
-=======
     <>
       <div className="header" data-testid="header">
         <FontAwesomeIcon
@@ -32,7 +23,6 @@ const Header = () => {
       </div>
       <SideManue open={sideMenueOpen} setOpen={setSideMenueOpen} />
     </>
->>>>>>> natalie-menue
   );
 };
 
